@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView, FeedErrorView {
+public final class FeedViewController: UITableViewController, FeedLoadingView, FeedErrorView {
 
     @IBOutlet private(set) public var errorView: ErrorView?
 
@@ -52,16 +52,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         cellController(forRowAt: indexPath).didSelect()
-    }
-    
-    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        indexPaths.forEach { indexPath in
-            cellController(forRowAt: indexPath).preload()
-        }
-    }
-    
-    public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        indexPaths.forEach(cancelCellControllerLoad)
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedItemCellController {
