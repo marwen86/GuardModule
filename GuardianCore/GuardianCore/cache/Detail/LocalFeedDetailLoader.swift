@@ -49,10 +49,6 @@ extension LocalFeedDetailLoader: FeedDetailLoader {
     public typealias LoadResult = FeedDetailLoader.Result
     
     public func load(endpoint: Requestable, completion: @escaping (LoadResult) -> Void) {
-        
-    }
-    
-    public func load(completion: @escaping (LoadResult) -> Void) {
         store.retrieve { [weak self] result in
             guard let self = self else { return }
             

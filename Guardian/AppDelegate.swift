@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GuardianCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,9 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let localCacheStore = ImagesStore(cache: NSCache<NSString, NSData>())
         let localImageLoader = LocalImageDataLoader(store: localCacheStore)
         
-        self.localFeedLoader?.load(completion: { result in
-            print("result")
-        })
         
         self.remoteFeedLoader?.load(endpoint: endPoint) { result in
             switch result {
