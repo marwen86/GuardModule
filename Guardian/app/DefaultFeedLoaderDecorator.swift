@@ -15,10 +15,16 @@ public final class DefaultFeedLoaderDecorator: FeedLoader {
     
     public func load(endpoint: Requestable, completion: @escaping (FeedLoader.Result) -> Void) {
         decoratee.load(endpoint: endpoint) { [weak self] result in
-            completion(result.map { feed in
-                self?.cache.saveIgnoringResult(feed)
-                return feed
-            })
+            switch result {
+            case .success(_):
+                completion(result.map { feed in
+                    self?.cache.saveIgnoringResult(feed)
+                    return feed
+                })
+            case let .failure(error):
+                completion(.failure(error))
+            }
+            
         }
     }
 

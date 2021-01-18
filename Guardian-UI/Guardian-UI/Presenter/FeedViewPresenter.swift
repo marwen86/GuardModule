@@ -8,7 +8,7 @@
 import Foundation
 import GuardianCore
 
-final class FeedViewPrsenter: FeedView {
+final class FeedViewPresenter: FeedView {
     private weak var controller: FeedViewController?
     private let imageLoader: FeedItemImageDataLoader
     

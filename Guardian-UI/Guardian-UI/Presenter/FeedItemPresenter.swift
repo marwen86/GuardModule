@@ -22,18 +22,18 @@ public final class FeedItemPresenter {
     }
     
     public func didStartLoadingImageData(for model: FeedItem) {
-        let model = FeedItemViewModel(image: nil, title: model.headline, publicationDate: model.webPublicationDate.toString)
+        let model = FeedItemViewModel(image: nil, title: model.headline, publicationDate: model.webPublicationDate.toString, apiUrl: URL(string: model.apiUrl))
         view.display(model)
     }
     
     public func didFinishLoadingImageData(with data: Data, for model: FeedItem) {
         let image = UIImage(data:data,scale:1.0)
-        let model = FeedItemViewModel(image: image, title: model.headline, publicationDate: model.webPublicationDate.toString)
+        let model = FeedItemViewModel(image: image, title: model.headline, publicationDate: model.webPublicationDate.toString, apiUrl: URL(string: model.apiUrl))
         view.display(model)
     }
     
     public func didFinishLoadingImageData(with error: Error, for model: FeedItem) {
-        let model = FeedItemViewModel(image: nil, title: model.headline, publicationDate: model.webPublicationDate.toString)
+        let model = FeedItemViewModel(image: nil, title: model.headline, publicationDate: model.webPublicationDate.toString, apiUrl: URL(string: model.apiUrl))
         view.display(model)
     }
 }

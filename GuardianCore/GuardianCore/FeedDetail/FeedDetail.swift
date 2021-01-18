@@ -31,9 +31,14 @@ public struct Content: Codable, Equatable {
 }
 
 public struct FieldsDetail:  Codable, Equatable {
-    let headline : String
     let main : String
-    public static let empty: FieldsDetail = FieldsDetail(headline:"", main: "")
+    let body: String
+    
+    internal init(main: String, body: String) {
+        self.main = main
+        self.body = body
+    }
+    public static let empty: FieldsDetail = FieldsDetail(main: "", body: "")
 }
 
 

@@ -104,7 +104,7 @@ private extension Array where Element == Article {
             ArticleEntity(type: $0.type,
                           sectionName: $0.sectionName,
                           webPublicationDate: $0.webPublicationDate,
-                          webUrl: $0.webUrl,
+                          apiUrl: $0.apiUrl,
                           fields: $0.fields.entity)
         }
     }
@@ -135,7 +135,7 @@ private extension Array where Element == ArticleEntity {
             Article(type: $0.type,
                     sectionName: $0.sectionName,
                     webPublicationDate: $0.webPublicationDate,
-                    webUrl: $0.webUrl,
+                    apiUrl: $0.apiUrl,
                     fields: $0.fields.model)
         }
     }

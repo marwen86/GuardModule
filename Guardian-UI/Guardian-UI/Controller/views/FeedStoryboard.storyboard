@@ -11,12 +11,12 @@
         <!--Feed View Controller-->
         <scene sceneID="C7X-LS-Tfe">
             <objects>
-                <tableViewController restorationIdentifier="FeedViewController" storyboardIdentifier="FeedViewController" id="Lal-fH-TQq" customClass="FeedViewController" customModule="Guardian" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="FeedViewController" storyboardIdentifier="FeedViewController" id="Lal-fH-TQq" customClass="FeedViewController" customModule="Guardian_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7ik-DJ-5hL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="hfa-gk-LTx" customClass="ErrorView" customModule="Guardian" customModuleProvider="target">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="hfa-gk-LTx" customClass="ErrorView" customModule="Guardian_UI" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -41,7 +41,7 @@
                             </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedItemCell" rowHeight="100" id="mmi-te-FC2" customClass="FeedItemCell" customModule="Guardian" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedItemCell" rowHeight="100" id="mmi-te-FC2" customClass="FeedItemCell" customModule="Guardian_UI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="62" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmi-te-FC2" id="p3d-IO-VCL">
@@ -106,6 +106,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnn-w8-Lbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80" y="42"/>
+        </scene>
+        <!--Feed Detail View Controller-->
+        <scene sceneID="Lge-AD-cLV">
+            <objects>
+                <viewController restorationIdentifier="FeedDetailViewController" storyboardIdentifier="FeedDetailViewController" id="UoP-Ge-aSK" customClass="FeedDetailViewController" customModule="Guardian_UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbU-8N-dRV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LR9-zi-KYq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" id="0Xk-sv-t1g" customClass="ErrorView" customModule="Guardian_UI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="30" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-Mx-c5S">
+                                        <rect key="frame" x="8" y="8" width="398" height="18"/>
+                                        <viewLayoutGuide key="safeArea" id="SX7-UE-I4z"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L9C-Mx-c5S" secondAttribute="bottom" constant="8" id="A8A-mx-Hgs"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="L9C-Mx-c5S" secondAttribute="trailing" id="fey-jP-roR"/>
+                                    <constraint firstItem="L9C-Mx-c5S" firstAttribute="top" secondItem="0Xk-sv-t1g" secondAttribute="top" constant="8" id="ltm-tm-vDl"/>
+                                    <constraint firstItem="L9C-Mx-c5S" firstAttribute="leading" secondItem="0Xk-sv-t1g" secondAttribute="leadingMargin" id="yoM-XK-ZWA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="L9C-Mx-c5S" id="x2S-wS-CmG"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nMM-Mt-DBI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LR9-zi-KYq" firstAttribute="top" secondItem="nMM-Mt-DBI" secondAttribute="top" id="Bby-ox-ycQ"/>
+                            <constraint firstItem="LR9-zi-KYq" firstAttribute="leading" secondItem="nMM-Mt-DBI" secondAttribute="leading" id="TIE-vq-fiw"/>
+                            <constraint firstItem="nMM-Mt-DBI" firstAttribute="trailing" secondItem="LR9-zi-KYq" secondAttribute="trailing" id="jkd-KS-Puk"/>
+                            <constraint firstItem="nMM-Mt-DBI" firstAttribute="bottom" secondItem="LR9-zi-KYq" secondAttribute="bottom" id="mFV-KB-6Fg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorView" destination="0Xk-sv-t1g" id="M0E-iO-gg3"/>
+                        <outlet property="webView" destination="LR9-zi-KYq" id="3Xq-zi-VK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpF-Wr-uB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="42"/>
         </scene>
     </scenes>
     <resources>

@@ -34,14 +34,14 @@ public struct ArticleEntity: Codable, Equatable {
     let type : String
     let sectionName : String
     let webPublicationDate : String
-    let webUrl : String
+    let apiUrl : String
     let fields: FieldsEntity
     
-    public init(type: String, sectionName: String, webPublicationDate: String, webUrl: String, fields: FieldsEntity) {
+    public init(type: String, sectionName: String, webPublicationDate: String, apiUrl: String, fields: FieldsEntity) {
         self.type = type
         self.sectionName = sectionName
         self.webPublicationDate = webPublicationDate
-        self.webUrl = webUrl
+        self.apiUrl = apiUrl
         self.fields = fields
     }
 }

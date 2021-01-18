@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import GuardianCore
 
 public final class FeedViewController: UITableViewController, FeedLoadingView, FeedErrorView {
 
     @IBOutlet private(set) public var errorView: ErrorView?
 
+    public var router: FeedRouterLogic?
     var interactor: FeedInteractorProtocol?
     var tableModel = [FeedItemCellController]() {
         didSet { tableView.reloadData() }
@@ -52,6 +54,7 @@ public final class FeedViewController: UITableViewController, FeedLoadingView, F
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         cellController(forRowAt: indexPath).didSelect()
+        router?.goToDetail(url: URL(string:  "https://content.guardianapis.com/football/2020/dec/28/football-and-brexit-a-guide-to-the-new-rules"))
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedItemCellController {

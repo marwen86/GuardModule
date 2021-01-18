@@ -8,7 +8,7 @@ final class FeedItemCellController: FeedItemView {
 	private let intercator: FeedCellInteractorProtocol
 	private var cell: FeedItemCell?
     private var id: UUID?
-	
+	private var viewModel: FeedItemViewModel?
 	init(intercator: FeedCellInteractorProtocol) {
 		self.intercator = intercator
 	}
@@ -29,6 +29,7 @@ final class FeedItemCellController: FeedItemView {
 	}
 	
     func display(_ viewModel: FeedItemViewModel) {
+        self.viewModel = viewModel
 		cell?.title.text = viewModel.title
 		cell?.thumbnail.setImageAnimated(viewModel.image)
         cell?.publicationDate.text = viewModel.publicationDate
@@ -37,6 +38,7 @@ final class FeedItemCellController: FeedItemView {
 
     func didSelect() {
         // TODO
+        let apiUrl = self.viewModel?.apiUrl
     }
 	
 	private func releaseCellForReuse() {

@@ -42,22 +42,22 @@ public struct Article: Codable, Equatable {
     let type : String
     let sectionName : String
     let webPublicationDate : String
-    let webUrl : String
+    let apiUrl : String
     let fields: Fields
     
     private enum CodingKeys: String, CodingKey {
         case type
         case sectionName
         case webPublicationDate
-        case webUrl
+        case apiUrl
         case fields
     }
     
-    public init(type: String, sectionName: String, webPublicationDate: String, webUrl: String, fields: Fields) {
+    public init(type: String, sectionName: String, webPublicationDate: String, apiUrl: String, fields: Fields) {
         self.type = type
         self.sectionName = sectionName
         self.webPublicationDate = webPublicationDate
-        self.webUrl = webUrl
+        self.apiUrl = apiUrl
         self.fields = fields
     }
 }

@@ -42,15 +42,15 @@ public struct ContentEntity: Codable, Equatable {
 }
 
 public struct FieldsDetailEntity:  Codable, Equatable {
-    let headline : String
     let main : String
+    let body: String
     
-    public init(headline: String, main: String) {
-        self.headline = headline
+    public init(main: String, body: String) {
         self.main = main
+        self.body = body
     }
     
-    public static let empty: FieldsDetailEntity = FieldsDetailEntity(headline:"", main: "")
+    public static let empty: FieldsDetailEntity = FieldsDetailEntity(main: "", body: "")
 }
 
 

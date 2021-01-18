@@ -107,7 +107,7 @@ private extension Content {
 
 private extension FieldsDetail {
     var entity: FieldsDetailEntity {
-        .init(headline: headline, main: main)
+        .init(main: main, body: body)
     }
 }
 
@@ -132,7 +132,7 @@ private extension ContentEntity {
 
 private extension FieldsDetailEntity {
     var model: FieldsDetail {
-        .init(headline: headline, main: main)
+        .init(main: main, body: body)
     }
 }
 

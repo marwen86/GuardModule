@@ -23,7 +23,8 @@ public final class RemoteFeedDetailLoader: FeedDetailLoader {
     }
 
     public func load(endpoint: Requestable, completion: @escaping (Result) -> Void) {
-        client.request(endpoint: endpoint) {[weak self] result in
+        let url = URL(string: "https://content.guardianapis.com/football/live/2020/oct/31/burnley-v-chelsea-plus-football-league-and-more-live?show-fields=main,body,headline,thumbnail&api-key=b910f9e7-183e-4041-893c-76456b317c44")
+        client.directRequest(endpoint: url!) {[weak self] result in
             guard self != nil else { return }
             switch result {
             case .success(let data):

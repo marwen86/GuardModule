@@ -6,13 +6,13 @@ import Foundation
 
 public struct FeedItem {
     
-    public var webUrl: String
+    public var apiUrl: String
     public var headline: String
     public var thumbnail: String
     public var webPublicationDate: Date
     
-    public init(webUrl: String, headline: String, thumbnail: String, webPublicationDate: Date) {
-        self.webUrl = webUrl
+    public init(apiUrl: String, headline: String, thumbnail: String, webPublicationDate: Date) {
+        self.apiUrl = apiUrl
         self.headline = headline
         self.thumbnail = thumbnail
         self.webPublicationDate = webPublicationDate
@@ -22,7 +22,7 @@ public struct FeedItem {
 extension Feed {
     public var items: [FeedItem] {
         return response.results.map { article in
-            FeedItem(webUrl: article.webUrl,
+            FeedItem(apiUrl: article.apiUrl,
                      headline: article.fields.headline,
                      thumbnail: article.fields.thumbnail,
                      webPublicationDate: article.webPublicationDate.toDate)
