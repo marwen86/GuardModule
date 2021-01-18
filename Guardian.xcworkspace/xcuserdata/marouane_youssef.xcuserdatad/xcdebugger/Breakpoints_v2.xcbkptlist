@@ -7,33 +7,144 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1BB840EC-227A-4E73-9A0D-A779883E25E0"
+            uuid = "C6744849-7BCA-4E1D-8CB2-87A4FAEC83DE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Guardian/AppDelegate.swift"
+            filePath = "Guardian/app/DefaultFeedItemImageDataLoaderDecorator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "loadImageData(from:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6744849-7BCA-4E1D-8CB2-87A4FAEC83DE - bec6b18dfb87ac5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Guardian.DefaultFeedItemImageDataLoaderDecorator.loadImageData(from: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; GuardianCore.FeedImageDataLoaderTask"
+                  moduleName = "Guardian"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marouane_youssef/Documents/Perso_workspace/GuardModule/Guardian/app/DefaultFeedItemImageDataLoaderDecorator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "C6744849-7BCA-4E1D-8CB2-87A4FAEC83DE - ed997293ec858b1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in Guardian.DefaultFeedItemImageDataLoaderDecorator.loadImageData(from: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; GuardianCore.FeedImageDataLoaderTask"
+                  moduleName = "Guardian"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marouane_youssef/Documents/Perso_workspace/GuardModule/Guardian/app/DefaultFeedItemImageDataLoaderDecorator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "201">
+               </Location>
+               <Location
+                  uuid = "C6744849-7BCA-4E1D-8CB2-87A4FAEC83DE - a9ad67f58f5264bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; Foundation.Data in closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in Guardian.DefaultFeedItemImageDataLoaderDecorator.loadImageData(from: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; GuardianCore.FeedImageDataLoaderTask"
+                  moduleName = "Guardian"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marouane_youssef/Documents/Perso_workspace/GuardModule/Guardian/app/DefaultFeedItemImageDataLoaderDecorator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63194349-BBA0-4A47-B4EB-192CD4842D43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Guardian/app/DefaultFeedItemImageDataLoaderDecorator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "loadImageData(from:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA395C26-2A7B-4AFC-8D2D-65390B65F658"
+            uuid = "9B3016BE-B83A-418E-9B32-082D731A69F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Guardian/AppDelegate.swift"
+            filePath = "Guardian/app/DefaultFeedItemImageDataLoaderComposite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "loadImageData(from:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D503C943-B288-4502-807E-3BB3193D7D6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianCore/GuardianCore/cache/Feed/LocalFeedImageDataLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "loadImageData(from:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D503C943-B288-4502-807E-3BB3193D7D6A - 13ffaaf52e31af2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuardianCore.LocalImageDataLoader.loadImageData(from: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; GuardianCore.FeedImageDataLoaderTask"
+                  moduleName = "GuardianCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marouane_youssef/Documents/Perso_workspace/GuardModule/GuardianCore/GuardianCore/cache/Feed/LocalFeedImageDataLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  uuid = "D503C943-B288-4502-807E-3BB3193D7D6A - 2134b0645cf867ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Swift.Error&gt;) -&gt; () in GuardianCore.LocalImageDataLoader.loadImageData(from: Foundation.URL, completion: (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; GuardianCore.FeedImageDataLoaderTask"
+                  moduleName = "GuardianCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marouane_youssef/Documents/Perso_workspace/GuardModule/GuardianCore/GuardianCore/cache/Feed/LocalFeedImageDataLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "199">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

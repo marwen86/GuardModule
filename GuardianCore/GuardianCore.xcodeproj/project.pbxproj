@@ -49,6 +49,20 @@
 			remoteGlobalIDString = 6FEC2A8025B4C01F002C6792;
 			remoteInfo = GuardianCore;
 		};
+		6FEC2CB925B5E9F5002C6792 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FEC2CB325B5E9F5002C6792 /* Guardian-UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6FEC2C2D25B5E6F0002C6792;
+			remoteInfo = "Guardian-UI";
+		};
+		6FEC2CBB25B5E9F5002C6792 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FEC2CB325B5E9F5002C6792 /* Guardian-UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6FEC2C3625B5E6F0002C6792;
+			remoteInfo = "Guardian-UITests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +101,7 @@
 		6FEC2B6F25B4E2C7002C6792 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		6FEC2B7025B4E2C7002C6792 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		6FEC2B7A25B4E96C002C6792 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		6FEC2CB325B5E9F5002C6792 /* Guardian-UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Guardian-UI.xcodeproj"; path = "../Guardian-UI/Guardian-UI.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +126,7 @@
 		6FEC2A7725B4C01E002C6792 = {
 			isa = PBXGroup;
 			children = (
+				6FEC2CB325B5E9F5002C6792 /* Guardian-UI.xcodeproj */,
 				6FEC2A8325B4C020002C6792 /* GuardianCore */,
 				6FEC2A8E25B4C021002C6792 /* GuardianCoreTests */,
 				6FEC2A8225B4C01F002C6792 /* Products */,
@@ -245,6 +261,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		6FEC2CB425B5E9F5002C6792 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FEC2CBA25B5E9F5002C6792 /* Guardian_UI.framework */,
+				6FEC2CBC25B5E9F5002C6792 /* Guardian-UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -323,6 +348,12 @@
 			mainGroup = 6FEC2A7725B4C01E002C6792;
 			productRefGroup = 6FEC2A8225B4C01F002C6792 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6FEC2CB425B5E9F5002C6792 /* Products */;
+					ProjectRef = 6FEC2CB325B5E9F5002C6792 /* Guardian-UI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6FEC2A8025B4C01F002C6792 /* GuardianCore */,
@@ -330,6 +361,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6FEC2CBA25B5E9F5002C6792 /* Guardian_UI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Guardian_UI.framework;
+			remoteRef = 6FEC2CB925B5E9F5002C6792 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6FEC2CBC25B5E9F5002C6792 /* Guardian-UITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Guardian-UITests.xctest";
+			remoteRef = 6FEC2CBB25B5E9F5002C6792 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6FEC2A7F25B4C01F002C6792 /* Resources */ = {

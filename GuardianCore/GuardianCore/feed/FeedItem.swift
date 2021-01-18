@@ -30,7 +30,7 @@ extension Feed {
     }
 
     private var sortChronologically: (FeedItem, FeedItem) -> Bool {
-        { lhs, rhs -> Bool in lhs.webPublicationDate > rhs.webPublicationDate }
+        { lhs, rhs -> Bool in lhs.webPublicationDate.toDate > rhs.webPublicationDate.toDate }
     }
 }
 
@@ -42,5 +42,11 @@ private extension String {
         inputFormatter.dateFormat = "dd/MM/yyyy"
         let resultString = inputFormatter.string(from: showDate)
         return resultString
+    }
+    
+    var toDate: Date {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return inputFormatter.date(from: self) ?? Date()
     }
 }

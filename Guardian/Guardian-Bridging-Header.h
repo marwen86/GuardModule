@@ -11,3 +11,4 @@
 
 #endif /* Guardian_Bridging_Header_h */
 #import <GuardianCore/GuardianCore.h>
+#import <Guardian_UI/Guardian_UI.h>

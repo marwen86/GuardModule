@@ -5,6 +5,9 @@
       location = "group:Guardian.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:GuardianCore/../Guardian-UI/Guardian-UI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GuardianCore/GuardianCore.xcodeproj">
    </FileRef>
 </Workspace>

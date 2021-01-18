@@ -10,13 +10,56 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let localStoreURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("Guardian.store")
+    
+    let localDetailStoreURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("GuardianDetail.store")
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        let config = ApiDataNetworkConfig(baseURL: URL(string: "https://content.guardianapis.com")!,
+                                          queryParameters: ["api-key": "b910f9e7-183e-4041-893c-76456b317c44",
+                                                            "language": NSLocale.preferredLanguages.first ?? "en"])
+        
+        let client = DefaultNetworkService(config: config)
+        let endPoint = APIEndpoints.getfeed()
+        
+        let remoteFeedLoader = RemoteFeedLoader(endpoint: endPoint, client: client)
+        let remoteImageLoader = RemoteFeedImageDataLoader(client: client)
+        
+        let localStore = CodableFeedStore(storeURL: localStoreURL)
+        
+        let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
+        
+        let localCacheStore = ImagesStore(cache: NSCache<NSString, NSData>())
+        let localImageLoader = LocalImageDataLoader(store: localCacheStore)
+        
+        
+        let feedViewController = FeedUIComposer.feedComposedWith(
+            feedLoader: DefaultFeedLoaderComposite(
+                primary: DefaultFeedLoaderDecorator(
+                    decoratee: remoteFeedLoader,
+                    cache: localFeedLoader
+                ),
+                fallback: localFeedLoader
+            ),
+            imageLoader: DefaultFeedItemImageDataLoaderComposite(
+                primary: localImageLoader,
+                fallback: DefaultFeedItemImageDataLoaderDecorator(
+                    decoratee: remoteImageLoader,
+                    cache: localImageLoader
+                )
+            )
+        )
+        
+        let navigationController = UINavigationController(rootViewController: feedViewController)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barTintColor = #colorLiteral(red: 0.07992280275, green: 0.1072936282, blue: 0.3030902147, alpha: 1)
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        window?.rootViewController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -1,0 +1,10 @@
+/* 
+  Feed.strings
+  Guardian
+
+  Created by Youssef Marouane on 18/01/2021.
+  
+*/
+
+"FEED_VIEW_TITLE" = "Home";
+"FEED_VIEW_CONNECTION_ERROR" = "Couldn't connect to server";

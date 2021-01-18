@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6FEC2B1925B4D374002C6792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B1825B4D374002C6792 /* AppDelegate.swift */; };
-		6FEC2B1B25B4D374002C6792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B1A25B4D374002C6792 /* SceneDelegate.swift */; };
 		6FEC2B1D25B4D374002C6792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B1C25B4D374002C6792 /* ViewController.swift */; };
 		6FEC2B2025B4D374002C6792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FEC2B1E25B4D374002C6792 /* Main.storyboard */; };
 		6FEC2B2225B4D37A002C6792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FEC2B2125B4D37A002C6792 /* Assets.xcassets */; };
@@ -21,6 +20,9 @@
 		6FEC2B9025B5939C002C6792 /* DefaultFeedLoaderComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B8C25B5939B002C6792 /* DefaultFeedLoaderComposite.swift */; };
 		6FEC2B9125B5939C002C6792 /* DefaultFeedItemImageDataLoaderComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B8D25B5939B002C6792 /* DefaultFeedItemImageDataLoaderComposite.swift */; };
 		6FEC2B9225B5939C002C6792 /* DefaultFeedLoaderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B8E25B5939B002C6792 /* DefaultFeedLoaderDecorator.swift */; };
+		6FEC2C1825B5DEC3002C6792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC2B1A25B4D374002C6792 /* SceneDelegate.swift */; };
+		6FEC2C9C25B5E87F002C6792 /* Guardian_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEC2C9B25B5E87F002C6792 /* Guardian_UI.framework */; };
+		6FEC2C9D25B5E87F002C6792 /* Guardian_UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEC2C9B25B5E87F002C6792 /* Guardian_UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6FEC2B6225B4D434002C6792 /* GuardianCore.framework in Embed Frameworks */,
+				6FEC2C9D25B5E87F002C6792 /* Guardian_UI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +78,7 @@
 		6FEC2B8D25B5939B002C6792 /* DefaultFeedItemImageDataLoaderComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultFeedItemImageDataLoaderComposite.swift; sourceTree = "<group>"; };
 		6FEC2B8E25B5939B002C6792 /* DefaultFeedLoaderDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultFeedLoaderDecorator.swift; sourceTree = "<group>"; };
 		6FEC2BAB25B597C4002C6792 /* Guardian-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guardian-Bridging-Header.h"; sourceTree = "<group>"; };
+		6FEC2C9B25B5E87F002C6792 /* Guardian_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Guardian_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEC2B6125B4D434002C6792 /* GuardianCore.framework in Frameworks */,
+				6FEC2C9C25B5E87F002C6792 /* Guardian_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +166,7 @@
 		6FEC2B5F25B4D434002C6792 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FEC2C9B25B5E87F002C6792 /* Guardian_UI.framework */,
 				6FEC2B6025B4D434002C6792 /* GuardianCore.framework */,
 			);
 			name = Frameworks;
@@ -309,11 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEC2B1D25B4D374002C6792 /* ViewController.swift in Sources */,
+				6FEC2C1825B5DEC3002C6792 /* SceneDelegate.swift in Sources */,
 				6FEC2B8F25B5939C002C6792 /* DefaultFeedItemImageDataLoaderDecorator.swift in Sources */,
 				6FEC2B9025B5939C002C6792 /* DefaultFeedLoaderComposite.swift in Sources */,
 				6FEC2B1925B4D374002C6792 /* AppDelegate.swift in Sources */,
 				6FEC2B9125B5939C002C6792 /* DefaultFeedItemImageDataLoaderComposite.swift in Sources */,
-				6FEC2B1B25B4D374002C6792 /* SceneDelegate.swift in Sources */,
 				6FEC2B9225B5939C002C6792 /* DefaultFeedLoaderDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -434,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
